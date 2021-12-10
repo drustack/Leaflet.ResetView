@@ -1,0 +1,31 @@
+{
+    "author": "Wong Hoi Sing Edison <hswong3i@pantarei-design.com>",
+    "description": "A reset view control for Leaflet",
+    "devDependencies": {
+        "jshint": "~2.13.1",
+        "sass": "~1.44.0",
+        "uglify-js": "~3.14.4"
+    },
+    "homepage": "https://github.com/drustack/Leaflet.ResetView",
+    "keywords": [
+        "leaflet",
+        "plugin",
+        "control",
+        "reset"
+    ],
+    "license": "Apache-2.0",
+    "main": "src/L.Control.ResetView.js",
+    "name": "leaflet.resetview",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/drustack/Leaflet.ResetView.git"
+    },
+    "readmeFilename": "README.md",
+    "scripts": {
+        "build": "npm run jshint; npm run sass; npm run uglifyjs",
+        "jshint": "jshint src/L.Control.ResetView.js",
+        "sass": "sass -s compressed src/L.Control.ResetView.scss dist/L.Control.ResetView.min.css",
+        "uglifyjs": "uglifyjs src/L.Control.ResetView.js > dist/L.Control.ResetView.min.js"
+    },
+    "version": "0.0.1"
+}
