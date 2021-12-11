@@ -1,11 +1,15 @@
 # Leaflet.ResetView
 
-[![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/hswong3i/Leaflet.ResetView)](https://www.jsdelivr.com/package/npm/@hswong3i/leaflet.resetview)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hswong3i/Leaflet.ResetView)](https://github.com/hswong3i/Leaflet.ResetView/tags)
 [![GitHub license](https://img.shields.io/github/license/hswong3i/Leaflet.ResetView)](https://github.com/hswong3i/Leaflet.ResetView/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/@hswong3i/leaflet.resetview)](https://www.npmjs.com/package/@hswong3i/leaflet.resetview)
+[![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/hswong3i/Leaflet.ResetView)](https://www.jsdelivr.com/package/npm/@hswong3i/leaflet.resetview)
 
 A reset view control for Leaflet.
+
+## Demo
+
+<https://hswong3i.github.io/Leaflet.ResetView/>
 
 ## Usage
 
@@ -20,7 +24,7 @@ To provide a button for reset view into its original location:
     
     map.addControl(new L.Control.ResetView());
 
-## Localization
+## Customization
 
 To change reset view control position or title:
 
@@ -29,7 +33,7 @@ To change reset view control position or title:
         title: "Review view"
     }));
 
-## Including via CDN
+## Include via CDN
 
 Leaflet.ResetView is available through [jsDelivr](https://www.jsdelivr.com/):
 
