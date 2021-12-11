@@ -46,7 +46,7 @@
             this.latlng = this.map.getCenter();
             this.zoom = this.map.getZoom();
             L.DomEvent.on(this.link, "click", function(e) {
-                this.map.setView(this.latlng, this.zoom);
+                this.map.flyTo(this.latlng, this.zoom);
             }, this);
 
             return this.container;

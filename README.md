@@ -7,6 +7,8 @@
 
 A reset view control for Leaflet.
 
+Design for [Drupal Leaflet Module](https://www.drupal.org/project/leaflet) integration.
+
 ## Demo
 
 <https://hswong3i.github.io/Leaflet.ResetView/>
