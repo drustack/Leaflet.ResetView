@@ -1,5 +1,10 @@
 # Leaflet.ResetView
 
+[![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/hswong3i/Leaflet.ResetView)](https://www.jsdelivr.com/package/npm/@hswong3i/leaflet.resetview)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hswong3i/Leaflet.ResetView)](https://github.com/hswong3i/Leaflet.ResetView/tags)
+[![GitHub license](https://img.shields.io/github/license/hswong3i/Leaflet.ResetView)](https://github.com/hswong3i/Leaflet.ResetView/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/@hswong3i/leaflet.resetview)](https://www.npmjs.com/package/@hswong3i/leaflet.resetview)
+
 A reset view control for Leaflet.
 
 ## Usage
@@ -26,8 +31,8 @@ To change reset view control position or title:
 
 Leaflet.ResetView is available through [jsDelivr](https://www.jsdelivr.com/):
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hswong3i/leaflet.resetview@0.0.1/dist/L.Control.ResetView.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@hswong3i/leaflet.resetview@0.0.1/dist/L.Control.ResetView.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hswong3i/leaflet.resetview/dist/L.Control.ResetView.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@hswong3i/leaflet.resetview/dist/L.Control.ResetView.min.js"></script>
 
 ## Development
 
