@@ -22,7 +22,7 @@
     }
 
     if (typeof window !== "undefined" && window.L) {
-        window.L.YourPlugin = factory(L);
+        window.L.Control.ResetView = factory(L);
     }
 }(function (L) {
     L.Control.ResetView = L.Control.extend({
@@ -33,8 +33,6 @@
 
         onAdd: function(map) {
             this.map = map;
-            this.latlng = this.map.getCenter();
-            this.zoom = this.map.getZoom();
 
             this.container = L.DomUtil.create("div", "leaflet-control-resetview leaflet-bar leaflet-control");
 
@@ -45,13 +43,13 @@
 
             this.icon = L.DomUtil.create("span", "leaflet-control-resetview-icon", this.link);
 
-            L.DomEvent.on(this.link, "click", this.resetView, this);
+            this.latlng = this.map.getCenter();
+            this.zoom = this.map.getZoom();
+            L.DomEvent.on(this.link, "click", function(e) {
+                this.map.setView(this.latlng, this.zoom);
+            }, this);
 
             return this.container;
-        },
-
-        resetView: function(e) {
-            this.map.setView(this.latlng, this.zoom);
         },
     });
 
