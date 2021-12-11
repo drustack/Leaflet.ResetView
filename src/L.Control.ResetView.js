@@ -13,18 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-(function (factory, window) {
 
-    // define an AMD module that relies on "leaflet"
+(function (factory, window) {
     if (typeof define === "function" && define.amd) {
         define(["leaflet"], factory);
-
-    // define a Common JS module that relies on "leaflet"
     } else if (typeof exports === "object") {
         module.exports = factory(require("leaflet"));
     }
 
-    // attach your plugin to the global "L" variable
     if (typeof window !== "undefined" && window.L) {
         window.L.YourPlugin = factory(L);
     }
@@ -36,13 +32,13 @@
         },
 
         onAdd: function(map) {
-            var container = L.DomUtil.create("div", "leaflet-control-resetview leaflet-bar leaflet-control");
-            
             this.map = map;
-            this.latlng = map.getCenter();
-            this.zoom = map.getZoom();
+            this.latlng = this.map.getCenter();
+            this.zoom = this.map.getZoom();
 
-            this.link = L.DomUtil.create("a", "leaflet-bar-part leaflet-bar-part-single", container);
+            this.container = L.DomUtil.create("div", "leaflet-control-resetview leaflet-bar leaflet-control");
+
+            this.link = L.DomUtil.create("a", "leaflet-bar-part leaflet-bar-part-single", this.container);
             this.link.title = this.options.title;
             this.link.href = "#";
             this.link.setAttribute("role", "button");
@@ -51,7 +47,7 @@
 
             L.DomEvent.on(this.link, "click", this.resetView, this);
 
-            return container;
+            return this.container;
         },
 
         resetView: function(e) {
