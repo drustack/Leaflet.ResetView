@@ -22,10 +22,10 @@
         "url": "https://github.com/hswong3i/Leaflet.ResetView.git"
     },
     "scripts": {
-        "build": "npm run jshint; npm run sass; npm run uglifyjs",
+        "build": "npm run jshint; npm run uglifyjs; npm run sass",
         "jshint": "jshint src/L.Control.ResetView.js",
         "sass": "sass -s compressed src/L.Control.ResetView.scss dist/L.Control.ResetView.min.css",
         "uglifyjs": "uglifyjs src/L.Control.ResetView.js -c -m --source-map -o dist/L.Control.ResetView.min.js"
     },
-    "version": "0.0.7"
+    "version": "0.0.8"
 }
