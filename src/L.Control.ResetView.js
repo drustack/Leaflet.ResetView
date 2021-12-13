@@ -49,7 +49,7 @@
         },
 
         _resetView: function(e) {
-            this._map.flyTo(this._latlng, this._zoom);
+            this._map.setView(this._latlng, this._zoom);
         },
     });
 
