@@ -17,23 +17,21 @@ Design for [Drupal Leaflet Module](https://www.drupal.org/project/leaflet) integ
 
 To provide a button for reset view into its original location:
 
-    var map = L.map("map").setView([51.505, -0.09], 13);
+    <div id="map"></div>
     
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution: "&copy; <a href='https://openstreetmap.org/copyright'>OpenStreetMap contributors</a>"
-    }).addTo(map);
-    
-    map.addControl(new L.Control.ResetView());
-
-## Customization
-
-To change reset view control position or title:
-
-    map.addControl(new L.Control.ResetView({
-        position: "topleft",
-        title: "Review view"
-    }));
+    <script>
+        var map = L.map("map").setView([51.505, -0.09], 13);
+        
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: "&copy; <a href='https://openstreetmap.org/copyright'>OpenStreetMap contributors</a>"
+        }).addTo(map);
+        
+        map.addControl(new L.Control.ResetView({
+            position: "topleft",
+            title: "Review view"
+        }));
+    </script>
 
 ## Include via CDN
 
@@ -51,8 +49,8 @@ Install NPM depedencies:
 Build CSS and JS individually:
 
     npm run jshint
-    npm run sass
     npm run uglifyjs
+    npm run sass
 
 Or simply build everything once together:
 

@@ -32,24 +32,24 @@
         },
 
         onAdd: function(map) {
-            this.map = map;
+            this._map = map;
 
-            this.container = L.DomUtil.create("div", "leaflet-control-resetview leaflet-bar leaflet-control");
+            this._container = L.DomUtil.create("div", "leaflet-control-resetview leaflet-bar leaflet-control");
+            this._link = L.DomUtil.create("a", "leaflet-bar-part leaflet-bar-part-single", this._container);
+            this._link.title = this.options.title;
+            this._link.href = "#";
+            this._link.setAttribute("role", "button");
+            this._icon = L.DomUtil.create("span", "leaflet-control-resetview-icon", this._link);
 
-            this.link = L.DomUtil.create("a", "leaflet-bar-part leaflet-bar-part-single", this.container);
-            this.link.title = this.options.title;
-            this.link.href = "#";
-            this.link.setAttribute("role", "button");
+            this._latlng = this._map.getCenter();
+            this._zoom = this._map.getZoom();
+            L.DomEvent.on(this._link, "click", this._resetView, this);
 
-            this.icon = L.DomUtil.create("span", "leaflet-control-resetview-icon", this.link);
+            return this._container;
+        },
 
-            this.latlng = this.map.getCenter();
-            this.zoom = this.map.getZoom();
-            L.DomEvent.on(this.link, "click", function(e) {
-                this.map.flyTo(this.latlng, this.zoom);
-            }, this);
-
-            return this.container;
+        _resetView: function(e) {
+            this._map.flyTo(this._latlng, this._zoom);
         },
     });
 
