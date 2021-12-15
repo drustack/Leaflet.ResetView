@@ -6,7 +6,7 @@
         "sass": "~1.44.0",
         "uglify-js": "~3.14.4"
     },
-    "homepage": "https://github.com/hswong3i/Leaflet.ResetView",
+    "homepage": "https://github.com/drustack/Leaflet.ResetView",
     "keywords": [
         "leaflet",
         "plugin",
@@ -15,11 +15,11 @@
     ],
     "license": "Apache-2.0",
     "main": "src/L.Control.ResetView.js",
-    "name": "@hswong3i/leaflet.resetview",
+    "name": "@drustack/leaflet.resetview",
     "readmeFilename": "README.md",
     "repository": {
         "type": "git",
-        "url": "https://github.com/hswong3i/Leaflet.ResetView.git"
+        "url": "https://github.com/drustack/Leaflet.ResetView.git"
     },
     "scripts": {
         "build": "npm run jshint; npm run uglifyjs; npm run sass",
@@ -27,5 +27,5 @@
         "sass": "sass -s compressed src/L.Control.ResetView.scss dist/L.Control.ResetView.min.css",
         "uglifyjs": "uglifyjs src/L.Control.ResetView.js -c -m --source-map -o dist/L.Control.ResetView.min.js"
     },
-    "version": "0.0.9"
+    "version": "0.0.10"
 }

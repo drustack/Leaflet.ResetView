@@ -34,7 +34,7 @@
         </style>
     </head>
     <body>
-        <a class="github-fork-ribbon" href="https://github.com/hswong3i/Leaflet.ResetView" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+        <a class="github-fork-ribbon" href="https://github.com/drustack/Leaflet.ResetView" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
         <div class="container">
             <div class="row mb-3">
                 <div class="col">
@@ -58,7 +58,12 @@
                 maxZoom: 19,
                 attribution: "&copy; <a href='https://openstreetmap.org/copyright'>OpenStreetMap contributors</a>"
             }).addTo(map);
-            map.addControl(new L.Control.ResetView());
+            L.control.resetview({
+                position: "topleft",
+                title: "Review view",
+                latlng: L.latLng([51.505, -0.09]),
+                zoom: 13,
+            }).addTo(map);
         </script>
     </body>
 </html>
