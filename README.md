@@ -1,9 +1,9 @@
 # Leaflet.ResetView
 
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hswong3i/Leaflet.ResetView)](https://github.com/hswong3i/Leaflet.ResetView/tags)
-[![GitHub license](https://img.shields.io/github/license/hswong3i/Leaflet.ResetView)](https://github.com/hswong3i/Leaflet.ResetView/blob/master/LICENSE)
-[![npm](https://img.shields.io/npm/v/@hswong3i/leaflet.resetview)](https://www.npmjs.com/package/@hswong3i/leaflet.resetview)
-[![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/hswong3i/Leaflet.ResetView)](https://www.jsdelivr.com/package/npm/@hswong3i/leaflet.resetview)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/drustack/Leaflet.ResetView)](https://github.com/drustack/Leaflet.ResetView/tags)
+[![GitHub license](https://img.shields.io/github/license/drustack/Leaflet.ResetView)](https://github.com/drustack/Leaflet.ResetView/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/@drustack/leaflet.resetview)](https://www.npmjs.com/package/@drustack/leaflet.resetview)
+[![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/drustack/Leaflet.ResetView)](https://www.jsdelivr.com/package/npm/@drustack/leaflet.resetview)
 
 A reset view control for Leaflet.
 
@@ -11,7 +11,7 @@ Design for [Drupal Leaflet Module](https://www.drupal.org/project/leaflet) integ
 
 ## Demo
 
-<https://hswong3i.github.io/Leaflet.ResetView/>
+<https://drustack.github.io/Leaflet.ResetView/>
 
 ## Usage
 
@@ -29,7 +29,9 @@ To provide a button for reset view into its original location:
         
         map.addControl(new L.Control.ResetView({
             position: "topleft",
-            title: "Review view"
+            title: "Reset view",
+            latlng: L.latLng([51.505, -0.09]),
+            zoom: 13,
         }));
     </script>
 
@@ -37,8 +39,8 @@ To provide a button for reset view into its original location:
 
 Leaflet.ResetView is available through [jsDelivr](https://www.jsdelivr.com/):
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hswong3i/leaflet.resetview/dist/L.Control.ResetView.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@hswong3i/leaflet.resetview/dist/L.Control.ResetView.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.js"></script>
 
 ## Development
 

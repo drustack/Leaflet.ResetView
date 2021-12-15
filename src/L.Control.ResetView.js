@@ -25,10 +25,12 @@
         window.L.Control.ResetView = factory(L);
     }
 }(function (L) {
-    L.Control.ResetView = L.Control.extend({
+    ResetView = L.Control.extend({
         options: {
             position: "topleft",
             title: "Reset view",
+            latlng: null,
+            zoom: null,
         },
 
         onAdd: function(map) {
@@ -41,17 +43,23 @@
             this._link.setAttribute("role", "button");
             this._icon = L.DomUtil.create("span", "leaflet-control-resetview-icon", this._link);
 
-            this._latlng = this._map.getCenter();
-            this._zoom = this._map.getZoom();
             L.DomEvent.on(this._link, "click", this._resetView, this);
 
             return this._container;
         },
 
+        onRemove: function(map) {
+            L.DomEvent.off(this._link, "click", this._resetView, this);
+        },
+
         _resetView: function(e) {
-            this._map.setView(this._latlng, this._zoom);
+            this._map.setView(this.options.latlng, this.options.zoom);
         },
     });
 
-    return L.Control.ResetView;
+    L.control.resetview = function(options) {
+        return new ResetView(options);
+    };
+
+    return ResetView;
 }, window));
