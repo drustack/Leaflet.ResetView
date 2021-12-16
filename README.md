@@ -27,12 +27,12 @@ To provide a button for reset view into its original location:
             attribution: "&copy; <a href='https://openstreetmap.org/copyright'>OpenStreetMap contributors</a>"
         }).addTo(map);
         
-        map.addControl(new L.Control.ResetView({
+        L.control.resetview({
             position: "topleft",
             title: "Reset view",
             latlng: L.latLng([51.505, -0.09]),
             zoom: 13,
-        }));
+        }).addTo(map);
     </script>
 
 ## Include via CDN
