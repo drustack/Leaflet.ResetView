@@ -4,6 +4,8 @@
 
 ### Minor Changes
 
+  - Replace jshint with eslint
+
 ## 1.1.0 - 2021-12-22
 
 ### Minor Changes
