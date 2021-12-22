@@ -9,13 +9,17 @@ A reset view control for Leaflet.
 
 Design for [Drupal Leaflet Module](https://www.drupal.org/project/leaflet) integration.
 
+## Requirement
+
+  - [Leaflet](https://github.com/Leaflet/Leaflet) 1.7.1+
+
 ## Demo
 
-<https://drustack.github.io/Leaflet.ResetView/>
+  - <https://drustack.github.io/Leaflet.ResetView/>
 
 ## Usage
 
-To provide a button for reset view into its original location:
+Provide a button for reset view into its original location:
 
     <div id="map"></div>
     
@@ -27,7 +31,7 @@ To provide a button for reset view into its original location:
             attribution: "&copy; <a href='https://openstreetmap.org/copyright'>OpenStreetMap contributors</a>"
         }).addTo(map);
         
-        L.control.resetview({
+        L.control.resetView({
             position: "topleft",
             title: "Reset view",
             latlng: L.latLng([51.505, -0.09]),

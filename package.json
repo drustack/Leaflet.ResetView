@@ -16,6 +16,9 @@
     "license": "Apache-2.0",
     "main": "src/L.Control.ResetView.js",
     "name": "@drustack/leaflet.resetview",
+    "peerDependencies": {
+        "leaflet": "~1.7"
+    },
     "readmeFilename": "README.md",
     "repository": {
         "type": "git",
@@ -27,5 +30,5 @@
         "sass": "sass -s compressed src/L.Control.ResetView.scss dist/L.Control.ResetView.min.css",
         "uglifyjs": "uglifyjs src/L.Control.ResetView.js -c -m --source-map -o dist/L.Control.ResetView.min.js"
     },
-    "version": "1.0.1"
+    "version": "1.1.0"
 }

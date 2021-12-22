@@ -1,8 +1,14 @@
 # Leaflet.ResetView
 
-## 1.1.0 - TBC
+## 1.2.0 - TBC
 
 ### Minor Changes
+
+## 1.1.0 - 2021-12-22
+
+### Minor Changes
+
+  - Rename factory function in camelCase as `L.control.syncView`
 
 ## 1.0.0 - 2021-12-16
 

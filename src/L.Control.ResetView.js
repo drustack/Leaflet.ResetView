@@ -57,7 +57,7 @@
         },
     });
 
-    L.control.resetview = function(options) {
+    L.control.resetView = function(options) {
         return new ResetView(options);
     };
 
