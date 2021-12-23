@@ -54,7 +54,7 @@ Install NPM depedencies:
 
 Build CSS and JS individually:
 
-    npm run jshint
+    npm run eslint
     npm run uglifyjs
     npm run sass
 
