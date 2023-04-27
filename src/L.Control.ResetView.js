@@ -53,6 +53,7 @@
         },
 
         _resetView: function(e) {
+            if (e) { L.DomEvent.preventDefault(e); }
             this._map.setView(this.options.latlng, this.options.zoom);
         },
     });
