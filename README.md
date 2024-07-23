@@ -11,18 +11,18 @@ Design for [Drupal Leaflet Module](https://www.drupal.org/project/leaflet) integ
 
 ## Requirement
 
-  - [Leaflet](https://github.com/Leaflet/Leaflet) 1.7.1+
+- [Leaflet](https://github.com/Leaflet/Leaflet) 1.9.4+
 
 ## Demo
 
-  - <https://drustack.github.io/Leaflet.ResetView/>
+- <https://drustack.github.io/Leaflet.ResetView/>
 
 ## Usage
 
 Provide a button for reset view into its original location:
 
     <div id="map"></div>
-    
+
     <script>
         var map = L.map("map").setView([51.505, -0.09], 13);
         
@@ -54,7 +54,7 @@ Install NPM depedencies:
 
 Build CSS and JS individually:
 
-    npm run jshint
+    npm run eslint
     npm run uglifyjs
     npm run sass
 
@@ -62,14 +62,18 @@ Or simply build everything once together:
 
     npm run build
 
+Start the simple static HTTP server with <http://localhost:8080/> for testing:
+
+    npm run http-server
+
 ## License
 
-  - Code released under [Apache License 2.0](LICENSE)
-  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
-  - SVG released under [CC BY 4.0](https://fontawesome.com/license/free)
+- Code released under [Apache License 2.0](LICENSE)
+- Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+- SVG released under [CC BY 4.0](https://fontawesome.com/license/free)
 
 ## Author Information
 
-  - Wong Hoi Sing Edison
-      - <https://twitter.com/hswong3i>
-      - <https://github.com/hswong3i>
+- Wong Hoi Sing Edison
+  - <https://twitter.com/hswong3i>
+  - <https://github.com/hswong3i>
